@@ -1,0 +1,9 @@
+# Eingabe des Variablennamens als String
+variablen_name = input("Gib den Variablennamen an: ")
+
+# Zugriff auf die Variable mit dem eingegebenen Namen
+if variablen_name in globals() and isinstance(globals()[variablen_name], list):
+    stelle = globals()[variablen_name]
+    print("Die Liste", variablen_name, "enthält:", stelle)
+else:
+    print("Die Variable", variablen_name, "existiert nicht oder ist keine Liste.")
